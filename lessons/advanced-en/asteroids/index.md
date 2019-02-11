@@ -1,41 +1,36 @@
-# Hra typu Asteroids
+# Gane Like Asteroids
 
-Dnes to všechno – třídy, grafiku, seznamy, a tak dále –
-spojíme dohromady do závěrečného projektu.
-Doufám, že se ti bude líbit!
+Our final project is going to use everything what we know: 
+classes, graphics, lists... I hope that you will like it!
 
-Zkusíme udělat klon hry [Asteroids](https://en.wikipedia.org/wiki/Asteroids_%28video_game%29),
-která poprvé vyšla na konci sedmdesátých let.
-V našem podání bude hra nakonec vypadat nějak takhle:
+We will try to make a clone of the game [Asteroids](https://en.wikipedia.org/wiki/Asteroids_%28video_game%29) that has been released in 1979.
+
+Our version will look like this:
 
 {{ figure(
     img=static('screenshot.png'),
-    alt="Screenshot hry typu Asteroids"
+    alt="Asteroids like game screenshot"
 ) }}
 
-Projekt je to docela složitý a – jako většina
-praktických projektů – využívá i některých věcí, které ještě na kurzu nebyly.
-Věřím, že ale přesto zvládneš všechno pochopit nebo dohledat!
+The project is quite complex. It is using few things that were not covered by the course yet. I know that you will be able to look them up.
 
-A ještě jedna věc: protože začátečnický kurz končí,
-začneme kód psát v angličtině, aby se pak dal sdílet s celým světem.
+One last thing: since we are not beginners, we will write code in Czech as the best programmers do :-)
 
 > [note]
-> Procházíš-li si projekt doma, je možné, že narazíš na
-> něco s čím si nebudeš vědět rady.
-> Kdyby se to stalo, prosím, ozvi se nám!
-> Rádi ti s projektem pomůžeme.
+> If you go through the project alone, it is possible that you
+> will be stuck at some problem. 
+> If it happens to you, let us know.
+> We will be glad to help you!
 
-
-## Vesmírná loď
+## Spaceship
 
 {# XXX: (asteroids1.py) #}
 
-První krok bude naprogramovat vesmírnou loď, která půjde ovládat klávesnicí.
+The first step is to program a spaceship that one can control by keyboard.
 
-* Vesmírnou loď bude reprezentovat objekt třídy `Spaceship`.
-* Každá loď má vlastní atributy `x` a `y` (pozice),
-  `x_speed` a `y_speed` (rychlost), `rotation` (úhel natočení) a
+* Instance of class `Spaceship` represents the spaceship.
+* Every spaceship has two attributes `x` a `y` (location),
+  `x_speed` a `y_speed`, `rotation`, and
   `sprite` (2D objekt v Pygletu s polohou, rotací a obrázkem).
 * Loď má metodu `tick`, která obstarává
   mechaniku týkající se lodi – posouvání, natáčení a ovládání.
