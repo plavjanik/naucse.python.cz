@@ -14,8 +14,6 @@ Our version will look like this:
 
 The project is quite complex. It is using few things that were not covered by the course yet. I know that you will be able to look them up.
 
-One last thing: since we are not beginners, we will write code in Czech as the best programmers do :-)
-
 > [note]
 > If you go through the project alone, it is possible that you
 > will be stuck at some problem. 
@@ -29,26 +27,21 @@ One last thing: since we are not beginners, we will write code in Czech as the b
 The first step is to program a spaceship that one can control by keyboard.
 
 * Instance of class `Spaceship` represents the spaceship.
-* Every spaceship has two attributes `x` a `y` (location),
+* Every spaceship has two attributes `x` a `y` (position),
   `x_speed` a `y_speed`, `rotation`, and
-  `sprite` (2D objekt v Pygletu s polohou, rotací a obrázkem).
-* Loď má metodu `tick`, která obstarává
-  mechaniku týkající se lodi – posouvání, natáčení a ovládání.
-* Všechny objekty ve hře si budeme dávat do globálního seznamu `objects`.
-  Zatím tam bude jenom vesmírná loď.
-* Co se ovládání týče, stisknuté klávesy si uchovávej v *množině* (angl. `set`),
-  což je datový typ podobný seznamu, jen nemá dané pořadí
-  prvků a každý prvek v ní může být pouze jednou.
-  (Na množinu se dá dívat i jako na slovník bez hodnot.)
-  Je k dispozici [tahák na množiny](https://github.com/pyvec/cheatsheets/blob/master/sets/sets-cs.pdf)
-  a pythonní dokumentace obsahuje k množinám
-  [tutoriál](https://docs.python.org/3/tutorial/datastructures.html#sets)
-  i [podrobný popis](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset).
-  Vesmírná loď se pak do množiny „podívá” v rámci
-  své metody `tick`.
-* Můžeš použít [sadu obrázků](http://opengameart.org/content/space-shooter-redux),
-  které nakreslil [Kenney Vleugels](http://kenney.nl)
-  a zpřístupnil je zadarmo komukoli. Nebo si nakresli/stáhni vlastní!
+  `sprite` (2D object in Pyglet wiht position, speed, rotation, and image).
+* Spaceship has a method called `tick` that handles the spaceship mechanics – movement, rotation, and control.
+* All objects that are in the game are stored in a global list `objects`.
+  It contains only the spaceship now.
+* All pressed keys should be stored in a *set* (keyword `set`).
+  It is a datatype list list but without order. It members can be in
+  only once. (Sets are like dictionaries without values.)
+  You can use [sets cheatsheet](https://github.com/pyvec/cheatsheets/blob/master/sets/sets-en.pdf) and the official Python documentation contains
+  [a tutorial](https://docs.python.org/3/tutorial/datastructures.html#sets)
+  and [the reference](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset).
+  The spaceship using thi set as part of the processing in its `tick` method.
+* You can used [the image set](http://opengameart.org/content/space-shooter-redux),
+  created by [Kenney Vleugels](http://kenney.nl). He made them public and free. You can draw your own if you want!
 * Ve hře později použijeme velké množství
   `Sprite`-ů a vykreslovat je jeden po druhém by trvalo docela dlouho.
   Všechny `Sprite`-y proto přidej do kolekce
@@ -62,7 +55,7 @@ The first step is to program a spaceship that one can control by keyboard.
   sprite1 = pyglet.sprite.Sprite(obrazek, batch=batch)
   sprite2 = pyglet.sprite.Sprite(obrazek, batch=batch)
 
-  # a potom můžeš vykreslit všechny najednou:
+  # You can draw all of them at the same time:
   batch.draw()
   ```
 
@@ -174,7 +167,7 @@ Povedlo se? Můžeš létat vesmírem?
 
 Projdi si předchozí body, jestli máš opravdu všechno, a můžeš pokračovat dál!
 
-## Asteroidy
+## Asteroids
 
 {# XXX: (asteroids2.py) #}
 
@@ -212,7 +205,7 @@ Povedlo se? Máš dva typy objektů?
 Zase si projdi, jestli máš všechno hotové,
 a jdeme na další část!
 
-## Kolize
+## Collisions
 
 {# XXX: (asteroids3.py) #}
 
@@ -294,7 +287,7 @@ Naše asteroidy jsou zatím docela neškodné. Pojďme to změnit.
 Povedlo se? Konečně se dá prohrát?
 Čas to všechno zkontrolovat, dát do Gitu a můžeme pokračovat!
 
-## Útok
+## Attack
 
 {# XXX: (asteroids4.py) #}
 
@@ -331,7 +324,7 @@ Teď zkusíme asteroidy rozbíjet.
 Povedlo se? Dá se i vyhrát? Čas to všechno dát do Gitu!
 
 
-## Dokončení a rozšíření
+## Final Steps and Possible Extentions
 
 {# XXX: (asteroids5.py) #}
 
